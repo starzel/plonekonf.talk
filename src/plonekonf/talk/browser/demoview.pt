@@ -3,13 +3,10 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="plonekonf.talk">
 <body>
-    <div metal:fill-slot="main">
-        <tal:main-macro metal:define-macro="main"
-                        tal:define="testview view/test">
+    <div metal:fill-slot="content-core" tal:define="testview view/test">
 
             <span tal:content="testview/dummy">test</span>
 
-        </tal:main-macro>
     </div>
 </body>
 </html>
