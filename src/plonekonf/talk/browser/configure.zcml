@@ -1,0 +1,16 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="plonekonf.talk">
+    <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="*"
+      name="demo_view"
+      class=".demoview.demoView"
+      template="demoview.pt"
+      allowed_interface=".demoview.IdemoView"
+      permission="zope.Public"
+      />
+
+</configure>
