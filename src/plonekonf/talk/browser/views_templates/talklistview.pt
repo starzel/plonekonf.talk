@@ -3,9 +3,21 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="plonekonf.talk">
 <body>
-    <div metal:fill-slot="content-core">
 
-        <table class="listing">
+    <metal:head fill-slot="javascript_head_slot">
+        <link rel="stylesheet" type="text/css" media="screen" href="++resource++jquery.datatables/media/css/jquery.dataTables.css">
+
+        <script type="text/javascript" src="++resource++jquery.datatables.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var oTable = $('#talks').dataTable({
+                });
+            })
+        </script>
+    </metal:head>
+
+    <div metal:fill-slot="content-core">
+        <table class="listing" id="talks">
             <thead>
                 <tr>
                     <th>
@@ -36,15 +48,13 @@
                         Advanced
                     </td>
                 </tr>
-
                 <tr tal:condition="not:view/talks">
                     <td colspan=3>
                         No talks so far :-(
                     </td>
                 </tr>
-
             </tbody>
-
+        </table>
     </div>
 </body>
 </html>
