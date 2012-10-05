@@ -5,18 +5,18 @@
 <body>
     <div metal:fill-slot="content-core">
 
-        <table>
+        <table class="listing">
             <thead>
                 <tr>
-                    <td>
+                    <th>
                         Title
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Speaker
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Audience
-                    </td>
+                    </th>
                 </tr>
             </thead>
             <tbody>
