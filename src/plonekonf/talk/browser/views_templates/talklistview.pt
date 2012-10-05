@@ -25,15 +25,24 @@
                         <a href=""
                            tal:attributes="href talk/url;
                                            title talk/description"
-                           tal:content="talk/title">The 7 sins of plone-development</a>
+                           tal:content="talk/title">
+                           The 7 sins of plone-development
+                        </a>
                     </td>
                     <td tal:content="talk/speaker">
                         Philip Bauer
                     </td>
                     <td tal:content="talk/audience">
-                        advanced/pro
+                        Advanced
                     </td>
                 </tr>
+
+                <tr tal:condition="not:view/talks">
+                    <td colspan=3>
+                        No talks so far :-(
+                    </td>
+                </tr>
+
             </tbody>
 
     </div>
