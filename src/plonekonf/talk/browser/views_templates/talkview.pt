@@ -4,8 +4,7 @@
       i18n:domain="plonekonf.talk">
 <body>
     <div metal:fill-slot="content-core">
-        3
-
+       <div tal:content="structure view/w/details/render" />
     </div>
 </body>
 </html>

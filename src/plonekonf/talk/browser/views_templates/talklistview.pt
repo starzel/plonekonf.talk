@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plonekonf.talk">
+<body>
+    <div metal:fill-slot="content-core">
+
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        Title
+                    </td>
+                    <td>
+                        Speaker
+                    </td>
+                    <td>
+                        Audience
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        The 7 sins of plone-development
+                    </td>
+                    <td>
+                        Philip Bauer
+                    </td>
+                    <td>
+                        advanced/pro
+                    </td>
+                </tr>
+            </tbody>
+
+    </div>
+</body>
+</html>
