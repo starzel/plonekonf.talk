@@ -17,7 +17,7 @@
     </metal:head>
 
     <div metal:fill-slot="content-core">
-        <table class="listing" id="talks">
+        <table class="" id="talks">
             <thead>
                 <tr>
                     <th>
@@ -28,6 +28,9 @@
                     </th>
                     <th>
                         Audience
+                    </th>
+                    <th>
+                        Rating
                     </th>
                 </tr>
             </thead>
@@ -47,9 +50,12 @@
                     <td tal:content="talk/audience">
                         Advanced
                     </td>
+                    <td tal:content="talk/rating | nothing">
+                        5 Stars :-)
+                    </td>
                 </tr>
                 <tr tal:condition="not:view/talks">
-                    <td colspan=3>
+                    <td colspan=4>
                         No talks so far :-(
                     </td>
                 </tr>
