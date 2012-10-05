@@ -21,8 +21,11 @@
             </thead>
             <tbody>
                 <tr tal:repeat="talk view/talks">
-                    <td tal:content="talk/title">
-                        The 7 sins of plone-development
+                    <td>
+                        <a href=""
+                           tal:attributes="href talk/url;
+                                           title talk/description"
+                           tal:content="talk/title">The 7 sins of plone-development</a>
                     </td>
                     <td tal:content="talk/speaker">
                         Philip Bauer

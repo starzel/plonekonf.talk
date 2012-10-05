@@ -30,6 +30,7 @@ class TalkListView(grok.View):
 
             results.append({
                 'title': brain.Title,
+                'description': brain.Description,
                 # same result as talk.absolute_url()
                 'url': brain.getURL(),
                 # 'average_rating': voting.average_vote(),
