@@ -33,6 +33,7 @@ class TalkListView(grok.View):
                 # same result as talk.absolute_url()
                 'url': brain.getURL(),
                 # 'average_rating': voting.average_vote(),
+                'speaker': talk.speaker,
                 'audience': talk.audience,
                 'uuid': brain.UID,
                 })

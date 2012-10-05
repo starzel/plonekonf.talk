@@ -20,14 +20,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
+                <tr tal:repeat="talk view/talks">
+                    <td tal:content="talk/title">
                         The 7 sins of plone-development
                     </td>
-                    <td>
+                    <td tal:content="talk/speaker">
                         Philip Bauer
                     </td>
-                    <td>
+                    <td tal:content="talk/audience">
                         advanced/pro
                     </td>
                 </tr>
