@@ -8,7 +8,7 @@ from zope.component import Interface
 
 
 class Vote(grok.Viewlet):
-    grok.context(Interface)
+    grok.context(IVoting)
     grok.viewletmanager(viewletIFs.IBelowContentTitle)
 
     def _vote(self):
