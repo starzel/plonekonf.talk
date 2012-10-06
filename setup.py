@@ -40,6 +40,10 @@ setup(name='plonekonf.talk',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.dexterity [grok]',
+          'plone.app.referenceablebehavior',
+          'plone.namedfile [blobs]',
+          'five.grok',
           # -*- Extra requirements: -*-
       ],
       extras_require={'test': ['plone.app.testing']},
