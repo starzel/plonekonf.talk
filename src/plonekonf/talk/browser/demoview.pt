@@ -1,12 +1,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
-      metal:use-macro="here/main_template/macros/master"
       i18n:domain="plonekonf.talk">
 <body>
-    <div metal:fill-slot="content-core" tal:define="testview view/test">
 
-            <span tal:content="testview/dummy">test</span>
+    <a href="http://www.mssharepointconference.com"
+       tal:define="a_fine_url string:http://www.ploneconf.org"
+       tal:attributes="href a_fine_url"
+       tal:content="string:A even better conference">
+        A sharepoint conference
+    </a>
 
-    </div>
+    <p tal:define="talks python:['Dexterity for the win!',
+                                 'Deco is the future',
+                                 'A keynote on some weird topic',
+                                 'The talk that I did not submit']"
+       tal:condition="python:'The talk that I did not submit' in talks"
+       tal:content="python:talks[0]">
+       A talk
+    </p>
+
+    <img tal:define="tag string:<img src='https://plone.org/logo.png'>"
+         tal:replace="tag">
+
+    <p>
+        <img tal:define="tag string:<img src='https://plone.org/logo.png'>"
+             tal:replace="structure tag">
+    </p>
+
+
+    <table tal:define="talks python:[{'title':'Dexterity for the win!',
+                                      'subjects':('content-types', 'dexterity')},
+                                     {'title':'Deco is the future',
+                                      'subjects':('layout', 'deco')},
+                                     {'title':'The State of Plone',
+                                      'subjects':('keynote',) },
+                                     {'title':'''Diazo designs don't suck!''',
+                                      'subjects':('design', 'diazo', 'xslt')}
+                                    ]">
+        <tr>
+            <th>Title</th>
+            <th>Topics</th>
+        </tr>
+        <tr tal:repeat="talk talks">
+            <td tal:content="talk/title">A talk</td>
+            <td tal:define="subjects talk/subjects">
+                <span tal:repeat="subject subjects"
+                      tal:replace="subject">
+                </span>
+            </td>
+        </tr>
+    </table>
+
+
+
+
 </body>
 </html>
+
