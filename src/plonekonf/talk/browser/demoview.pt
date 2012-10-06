@@ -27,7 +27,6 @@
              tal:replace="structure tag">
     </p>
 
-
     <table tal:define="talks python:[{'title':'Dexterity for the win!',
                                       'subjects':('content-types', 'dexterity')},
                                      {'title':'Deco is the future',
@@ -50,8 +49,6 @@
             </td>
         </tr>
     </table>
-
-
 
 
 </body>
