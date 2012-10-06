@@ -1,7 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
+      metal:use-macro="context/main_template/macros/master"
       i18n:domain="plonekonf.talk">
 <body>
+
+  <metal:content-core fill-slot="content-core">
+
+    <h3>Example 1</h3>
 
     <a href="http://www.mssharepointconference.com"
        tal:define="a_fine_url string:http://www.ploneconf.org"
@@ -9,6 +14,9 @@
        tal:content="string:A even better conference">
         A sharepoint conference
     </a>
+
+    <hr>
+    <h3>Example 2</h3>
 
     <p tal:define="talks python:['Dexterity for the win!',
                                  'Deco is the future',
@@ -19,13 +27,22 @@
        A talk
     </p>
 
+    <hr>
+    <h3>Example 3</h3>
+
     <img tal:define="tag string:<img src='https://plone.org/logo.png'>"
          tal:replace="tag">
+
+    <hr>
+    <h3>Example 4</h3>
 
     <p>
         <img tal:define="tag string:<img src='https://plone.org/logo.png'>"
              tal:replace="structure tag">
     </p>
+
+    <hr>
+    <h3>Example 5</h3>
 
     <table tal:define="talks python:[{'title':'Dexterity for the win!',
                                       'subjects':('content-types', 'dexterity')},
@@ -50,6 +67,10 @@
         </tr>
     </table>
 
+    <hr>
+    <h3>Example 6</h3>
+
+  </metal:content-core>
 
 </body>
 </html>
