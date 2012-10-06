@@ -28,6 +28,20 @@
        tal:content="python:title.upper()">
        A big title
     </p>
+
+    <h3>Example 3</h3>
+
+    <ul>
+        <li tal:define="talks python:['Dexterity for the win!',
+                                      'Deco is the future',
+                                      'A keynote on some weird topic',
+                                      'The talk that I did not submit']"
+            tal:repeat="talk talks"
+            tal:content="talk">
+              A talk
+        </li>
+    </ul>
+
   </metal:content-core>
 
 </body>
