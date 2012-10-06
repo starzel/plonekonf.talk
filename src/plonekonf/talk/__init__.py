@@ -1,4 +1,7 @@
 # -*- extra stuff goes here -*-
+from zope.i18nmessageid import MessageFactory
+
+talkMessageFactory = MessageFactory('plonekonf.talk')
 
 
 def initialize(context):
