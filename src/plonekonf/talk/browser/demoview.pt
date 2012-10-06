@@ -51,6 +51,13 @@
       </tal:vars>
     </dl>
 
+    <h3>Example 5</h3>
+
+    <p>
+        <img tal:define="tag string:<img src='https://plone.org/logo.png'>"
+             tal:replace="structure tag">
+    </p>
+
   </metal:content-core>
 
 </body>
