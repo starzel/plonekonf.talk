@@ -1,7 +1,6 @@
-<tal:snippet omit-tag="">
   <div class="voting">
     <div id="current_rating" tal:condition="viewlet/has_votes">
-      Die durchschnittliche Bewertung dieses Talks liegt derzeit bei <span tal:content="viewlet/average">200</span>      
+      Die durchschnittliche Bewertung dieses Talks liegt derzeit bei <span tal:content="viewlet/average">200</span>
     </div>
     <div id="alreadyvoted" class="voting_option">
       Sie haben diesen Talk schon bewertet. Vielen Dank!
@@ -24,7 +23,7 @@
     </div>
     <!-- Hier übergeben wir aus Plone heraus Informationen an das Javascript
          so ähnlich wie Parameter an eine Methode -->
-    <a href="#" class="hiddenStructure" id="context_url" 
+    <a href="#" class="hiddenStructure" id="context_url"
        tal:attributes="href context/absolute_url"/>
     <span id="voted" tal:condition="viewlet/voted" />
   </div>
@@ -34,4 +33,4 @@
     jq(document).ready(function(){
     plonekonf.init_voting_viewlet(jq(".voting"));
     });
-</tal:snippet> 
+  </script>
