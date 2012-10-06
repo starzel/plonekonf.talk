@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
-      metal:use-macro="here/main_template/macros/master"
+      metal:use-macro="context/main_template/macros/master"
       i18n:domain="plonekonf.talk">
 <body>
 
@@ -16,7 +16,7 @@
         </script>
     </metal:head>
 
-    <div metal:fill-slot="content-core">
+    <metal:content-core fill-slot="content-core">
         <table class="" id="talks">
             <thead>
                 <tr>
@@ -65,6 +65,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    <metal:content-core fill-slot="content-core">
 </body>
 </html>
