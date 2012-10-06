@@ -50,9 +50,13 @@
                     <td tal:content="talk/audience">
                         Advanced
                     </td>
-                    <td tal:content="talk/rating | nothing">
+                    <td tal:content="talk/average_rating | nothing">
                         5 Stars :-)
                     </td>
+                    <td tal:content="python:talk['average_rating'] or ''">
+                        5 Stars :-)
+                    </td>
+
                 </tr>
                 <tr tal:condition="not:view/talks">
                     <td colspan=4>
