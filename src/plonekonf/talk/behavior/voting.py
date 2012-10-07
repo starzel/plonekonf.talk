@@ -33,9 +33,12 @@ class Vote(object):
         """
         hash = md5()
         hash.update(request.getClientAddr())
-        for key in ["User-Agent", "Accept-Language",
+        for key in ["User-Agent",
+                    "Accept-Language",
                     "Accept-Encoding", "Accept-Charset"]:
-            hash.update(request.getHeader(key))
+            header = request.getHeader(key)
+            if header:
+                hash.update(request.getHeader(key))
         return hash.hexdigest()
 
     def vote(self, vote, request):
@@ -66,7 +69,7 @@ class Vote(object):
     def already_voted(self, request):
         return self._hash(request) in self.annotations['voted']
 
-    def clear(self): 
+    def clear(self):
         annotations = IAnnotations(self.context)
         annotations[KEY] = PersistentDict({'voted': PersistentList()})
         self.annotations = annotations[KEY]
