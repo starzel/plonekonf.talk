@@ -58,6 +58,32 @@
              tal:replace="structure tag">
     </p>
 
+    <h3>Example 6</h3>
+
+    <table class="plain"
+           tal:define="talks python:[{'title':'Dexterity for the win!',
+                                      'subjects':('content-types', 'dexterity')},
+                                     {'title':'Deco is the future',
+                                      'subjects':('layout', 'deco')},
+                                     {'title':'The State of Plone',
+                                      'subjects':('keynote',) },
+                                     {'title':'''Diazo designs don't suck!''',
+                                      'subjects':('design', 'diazo', 'xslt')}
+                                    ]">
+        <tr>
+            <th>Title</th>
+            <th>Topics</th>
+        </tr>
+        <tr tal:repeat="talk talks">
+            <td tal:content="talk/title">A talk</td>
+            <td tal:define="subjects talk/subjects">
+                <span tal:repeat="subject subjects"
+                      tal:replace="subject">
+                </span>
+            </td>
+        </tr>
+    </table>
+
   </metal:content-core>
 
 </body>
