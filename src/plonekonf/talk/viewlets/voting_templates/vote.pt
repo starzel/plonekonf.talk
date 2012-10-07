@@ -1,36 +1,35 @@
-  <div class="voting">
-    <div id="current_rating" tal:condition="viewlet/has_votes">
-      Die durchschnittliche Bewertung dieses Talks liegt derzeit bei <span tal:content="viewlet/average">200</span>
-    </div>
-    <div id="alreadyvoted" class="voting_option">
-      Sie haben diesen Talk schon bewertet. Vielen Dank!
-    </div>
-    <div id="notyetvoted" class="voting_option">
-      Was halten Sie von dem Talk? <div class="votes"><span id="voting_plus">+1</span> <span id="voting_neutral">0</span> <span id="voting_negative">-1</span></div>
-    </div>
-    <div id="no_ratings" tal:condition="not: viewlet/has_votes">
-      Dieser Talk wurde noch nicht bewertet. Sei der erste!
-    </div>
-    <div id="delete_votings"
-         tal:condition="viewlet/is_manager"
-         >
+<div class="voting">
+  <div id="current_rating" tal:condition="viewlet/has_votes">
+    Average rating: <span tal:content="viewlet/average">200</span>
+  </div>
+  <div id="alreadyvoted" class="voting_option">
+    You already rated this voted for this talk!
+  </div>
+  <div id="notyetvoted" class="voting_option">
+    Vote for this talk: <div class="votes"><span id="voting_plus">+1</span> <span id="voting_neutral">0</span> <span id="voting_negative">-1</span></div>
+  </div>
+  <div id="no_ratings" tal:condition="not: viewlet/has_votes">
+    Be the first one to vote on this talk!
+  </div>
+
+  <tal:reset tal:condition="viewlet/is_manager">
+    <div id="delete_votings">
       Delete all votings
     </div>
-    <div id="delete_votings2" class="areyousure warning"
-         tal:condition="viewlet/is_manager"
-         >
+    <div id="delete_votings2" class="areyousure warning">
       Are you sure?
     </div>
-    <!-- Hier übergeben wir aus Plone heraus Informationen an das Javascript
-         so ähnlich wie Parameter an eine Methode -->
-    <a href="#" class="hiddenStructure" id="context_url"
-       tal:attributes="href context/absolute_url"></a>
-    <span id="voted" tal:condition="viewlet/voted" />
-  </div>
-  <script type="text/javascript">
-    // JQuery standardkonstruct um Code erst dann auszuführen, wenn die Seite
-    // bereits geladen wurde.
-    jq(document).ready(function(){
-    plonekonf.init_voting_viewlet(jq(".voting"));
-    });
-  </script>
+  </tal:reset>
+
+  <!-- Hier übergeben wir aus Plone heraus Informationen an das Javascript
+       so ähnlich wie Parameter an eine Methode -->
+  <a href="#" class="hiddenStructure" id="context_url"
+     tal:attributes="href context/absolute_url"></a>
+  <span id="voted" tal:condition="viewlet/voted" />
+</div>
+
+<script type="text/javascript">
+  jq(document).ready(function(){
+  plonekonf.init_voting_viewlet(jq(".voting"));
+  });
+</script>
