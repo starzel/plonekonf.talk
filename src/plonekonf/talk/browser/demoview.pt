@@ -13,6 +13,14 @@
       }
     </style>
 
+    <h3>Example 1</h3>
+
+    <a href="http://www.mssharepointconference.com"
+       tal:define="a_fine_url string:http://www.ploneconf.org"
+       tal:attributes="href a_fine_url"
+       tal:content="string:An even better conference">
+        A sharepoint conference
+    </a>
 
   </metal:content-core>
 
