@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plonekonf.talk">
+<body>
+    <metal:content-core fill-slot="content-core">
+        <p>Suitable for <em tal:replace="context/audience"></em>
+        </p>
+
+        <div tal:content="structure view/w/details/render" />
+        
+        <div>Presenter:
+            <p>
+                <strong tal:content="context/Creator">
+                User
+                </strong>
+            </p>
+        </div>
+    </metal:content-core>
+</body>
+</html>
