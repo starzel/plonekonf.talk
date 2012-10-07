@@ -23,5 +23,6 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <include package=".browser" />
+  <include package=".behavior" />
 
 </configure>
