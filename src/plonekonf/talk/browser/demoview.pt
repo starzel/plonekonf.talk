@@ -84,6 +84,26 @@
         </tr>
     </table>
 
+    <tal:remove condition="nothing">
+      <metal:macro define-macro="example">
+        <h3 metal:define-slot="title">Example title</h3>
+        <div>
+          <metal:slot define-slot="content">
+          Content
+        </metal:slot>
+        </div>
+      </metal:macro>
+    </tal:remove>
+    <metal:macro1 use-macro="view/macros/example">
+      <h3 metal:fill-slot="title">Example 7</h3>
+      <p metal:fill-slot="content">Example with relative macro reference</p>
+    </metal:macro1>
+    <metal:macro2 use-macro="context/@@demo_view/macros/example">
+      <h3 metal:fill-slot="title">Example 8</h3>
+      <p metal:fill-slot="content">Example with <em>absolute</em> macro reference</p>
+    </metal:macro2>
+
+
   </metal:content-core>
 
 </body>
