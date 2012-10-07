@@ -22,6 +22,12 @@
         A sharepoint conference
     </a>
 
+    <h3>Example 2</h3>
+
+    <p tal:define="title context/title"
+       tal:content="python:title.upper()">
+       A big title
+    </p>
   </metal:content-core>
 
 </body>
