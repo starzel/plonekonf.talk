@@ -40,6 +40,7 @@ setup(name='plonekonf.talk',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'collective.js.datatables',
           'plone.app.dexterity [grok]',
           'plone.app.referenceablebehavior',
           'plone.namedfile [blobs]',
