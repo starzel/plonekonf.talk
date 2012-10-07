@@ -4,5 +4,6 @@
   <dependencies>
     <dependency>profile-plone.app.dexterity:default</dependency>
     <dependency>profile-collective.js.datatables:default</dependency>
+    <dependency>profile-starzel.votable_behavior:default</dependency>
   </dependencies>
 </metadata>

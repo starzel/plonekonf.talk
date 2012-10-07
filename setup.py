@@ -44,6 +44,7 @@ setup(name='plonekonf.talk',
           'collective.js.datatables',
           'plone.app.referenceablebehavior',
           'plone.namedfile [blobs]',
+          'starzel.votable_behavior',
           'five.grok',
           # -*- Extra requirements: -*-
       ],
