@@ -41,6 +41,7 @@ setup(name='plonekonf.talk',
       install_requires=[
           'setuptools',
           'plone.app.dexterity [grok]',
+          'collective.js.datatables',
           'plone.app.referenceablebehavior',
           'plone.namedfile [blobs]',
           'five.grok',
