@@ -24,7 +24,7 @@
     <!-- Hier übergeben wir aus Plone heraus Informationen an das Javascript
          so ähnlich wie Parameter an eine Methode -->
     <a href="#" class="hiddenStructure" id="context_url"
-       tal:attributes="href context/absolute_url"/>
+       tal:attributes="href context/absolute_url"></a>
     <span id="voted" tal:condition="viewlet/voted" />
   </div>
   <script type="text/javascript">
