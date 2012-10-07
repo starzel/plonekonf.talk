@@ -1,15 +1,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
-      metal:use-macro="here/main_template/macros/master"
+      metal:use-macro="context/main_template/macros/master"
       i18n:domain="plonekonf.talk">
 <body>
-    <div metal:fill-slot="main">
-        <tal:main-macro metal:define-macro="main"
-                        tal:define="testview view/test">
 
-            <span tal:content="testview/dummy">test</span>
+  <metal:content-core fill-slot="content-core">
 
-        </tal:main-macro>
-    </div>
+    <style>
+      h3 {
+        border-bottom: 1px solid black;
+        margin: 1.5em 0 1em;
+      }
+    </style>
+
+
+  </metal:content-core>
+
 </body>
 </html>
+
