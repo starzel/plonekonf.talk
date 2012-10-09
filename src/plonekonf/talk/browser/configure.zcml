@@ -1,4 +1,4 @@
-<configure 
+<configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plonekonf.talk">
@@ -12,5 +12,10 @@
       allowed_interface=".demoview.IDemoView"
       permission="zope.Public"
       />
+
+<include package="z3c.jbot" file="meta.zcml" />
+
+<browser:jbot
+    directory="template_overrides" />
 
 </configure>
