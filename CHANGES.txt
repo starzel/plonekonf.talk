@@ -4,13 +4,17 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added Author-Names
+  [pbauer]
 
 
 0.3 (2012-10-10)
 ----------------
 
-- Nothing changed yet.
+- Fixed assignment of Talk-View to talks
+  [pbauer]
+- Fix Viewlet
+  [pbauer]
 
 
 0.2 (2012-10-09)
