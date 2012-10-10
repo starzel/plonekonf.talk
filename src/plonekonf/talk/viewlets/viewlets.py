@@ -10,5 +10,5 @@ class Social(grok.Viewlet):
     grok.viewletmanager(viewletIFs.IBelowContentTitle)
 
     def lanyrd_link(self):
-        adapted = ISocial(self.context)
-        return adapted.lanyrd
+        link = getattr(self.context, 'lanyrd', None)
+        return link
